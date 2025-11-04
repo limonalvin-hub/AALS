@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Allowance Aid Lending Services</title> <!-- UPDATED TITLE -->
+  <!-- Load Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Custom scroll behavior for smooth internal navigation */
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Style to prevent background content from scrolling when modal is open */
+    .overflow-hidden {
+      overflow: hidden;
+    }
+  </style>
+
+  <script>
+    // Tailwind Custom Configuration for SSU Colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ssu-primary': '#1E3A8A', // Dark Blue
+            'ssu-secondary': '#F59E0B', // Gold/Yellow
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+
+      <div class="text-xl font-bold text-ssu-primary">
+
+        ALLOWANCE AID LENDING SERVICES
+        <!-- UPDATED HEADER TEXT -->
+      </div>
+
+      <!-- Mobile Menu Button (Hidden on larger screens) --><button id="menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-ssu-secondary">
+
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8" id="desktop-nav">
+
+        <a href="#hero" class="text-gray-600 hover:text-ssu-primary font-medium transition duration-150">Home</a>
+
+        <a href="#programs" class="text-gray-600 hover:text-ssu-primary font-medium transition duration-150">Loan Programs</a>
+
+        <a href="#application" class="text-gray-600 hover:text-ssu-primary font-medium transition duration-150">Apply Now</a>
+
+        <a href="#faq" class="text-gray-600 hover:text-ssu-primary font-medium transition duration-150">Check Status</a>
+
+        <a href="#contact" class="text-gray-600 hover:text-ssu-primary font-medium transition duration-150">Contact</a>
+
+      </nav>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav id="mobile-menu" class="md:hidden bg-white shadow-lg hidden">
+
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+
+        <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Home</a>
+
+        <a href="#programs" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Loan Programs</a>
+
+        <a href="#application" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Apply Now</a>
+
+        <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Check Status</a>
+
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Contact</a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main class="max-w-7xl mx-auto">
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-ssu-primary text-white rounded-b-3xl shadow-xl">
+
+      <div class="text-center">
+
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+
+          Allowance Aid Lending Services: Built on trust provided by us 
+
+        </h1> <!-- UPDATED HERO HEADING -->
+        <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
+
+          Financial aid is available to help you achieve your academic dreams. Explore our flexible borrowing options today.
+
+        </p>
+
+        <a href="#application" class="inline-block px-10 py-4 text-lg font-semibold bg-ssu-secondary hover:bg-yellow-600 text-ssu-primary rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+
+          Start Your Application
+
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- Loan Programs Section -->
+    <section id="programs" class="py-16 px-4 sm:px-6 lg:px-8">
+
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-ssu-primary">Our loan options are flexible and affordable:</h2>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+
+        <!-- Loan Option 1 -->
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-ssu-secondary transition duration-300 hover:shadow-xl">
+
+          <h3 class="text-xl font-semibold text-ssu-primary mb-2">₱200 and below</h3>
+
+          <ul class="list-disc list-inside text-gray-600 space-y-1 pl-4">
+
+            <li>Tenure: 1 week</li>
+
+            <li>Interest: 5%</li>
+
+            <li>Repayment: Paid weekly</li>
+
+          </ul>
+
+        </div>
+
+        <!-- Loan Option 2 -->
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-ssu-secondary transition duration-300 hover:shadow-xl">
+
+          <h3 class="text-xl font-semibold text-ssu-primary mb-2">₱300 – ₱500</h3>
+
+          <ul class="list-disc list-inside text-gray-600 space-y-1 pl-4">
+
+            <li>Tenure: 2 weeks</li>
+
+            <li>Interest: 7%</li>
+
+            <li>Repayment: Paid weekly</li>
+
+          </ul>
+
+        </div>
+
+        <!-- Loan Option 3 -->
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-ssu-secondary transition duration-300 hover:shadow-xl">
+
+          <h3 class="text-xl font-semibold text-ssu-primary mb-2">₱600 – ₱1000</h3>
+
+          <ul class="list-disc list-inside text-gray-600 space-y-1 pl-4">
+
+            <li>Tenure: 1 month</li>
+
+            <li>Interest: 10%</li>
+
+            <li>Repayment: Paid weekly</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="application" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100 rounded-xl m-4 shadow-inner">
+
+      <div class="max-w-2xl mx-auto">
+
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-ssu-primary">Secure Your Funding</h2>
+
+        <p class="text-center text-gray-600 mb-8">Fill out the preliminary form below. All fields are required.</p>
+
+        <form id="loan-application-form" class="bg-white p-6 md:p-10 rounded-xl shadow-2xl space-y-6">
+
+          <!-- Full Name -->
+          <div>
+
+            <label for="full-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+
+            <input type="text" id="full-name" name="full-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-ssu-secondary focus:border-ssu-secondary transition duration-150">
+
+          </div>
+
+          <!-- SSU Student ID -->
+          <div>
+
+            <label for="student-id" class="block text-sm font-medium text-gray-700 mb-1">Student ID (e.g., 2023-XXXXX)</label>
+
+            <input type="text" id="student-id" name="student-id" required pattern="\d{4}-\d{5}" title="Format: YYYY-NNNNN" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-ssu-secondary focus:border-ssu-secondary transition duration-150">
+
+          </div>
+
+          <!-- Course/Program of Study -->
+          <div>
+
+            <label for="course" class="block text-sm font-medium text-gray-700 mb-1">Course/Program of Study</label>
+
+            <select id="course" name="course" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-ssu-secondary focus:border-ssu-secondary bg-white transition duration-150">
+
+              <option value="">Select your course</option>
+
+              <option value="IT">BS Information Technology</option>
+
+              <option value="ED">BS Education</option>
+
+              <option value="FISH">BS Fisheries</option>
+
+              <option value="NURS">BS Nursing</option>
+              <option value="ENT">BS Entrepreneurship
+            </select>
+
+          </div>
+
+          <!-- Requested Amount (Slider) -->
+          <div>
+
+            <label for="requested-amount" class="block text-sm font-medium text-gray-700 mb-1">
+
+              Requested Amount (₱)
+
+            </label>
+
+            <!-- UPDATED MIN, MAX, STEP, AND DEFAULT VALUE --><input type="range" id="requested-amount" name="requested-amount" min="200" max="1000" step="100" value="1000" oninput="document.getElementById('amount-display').innerText = this.value.toLocaleString('en-PH', { style: 'currency', currency: 'PHP' })" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-ssu-secondary transition duration-150">
+
+            <div class="mt-2 text-center text-xl font-bold text-ssu-primary">
+
+              <!-- UPDATED DEFAULT DISPLAY VALUE --><span id="amount-display">₱1000</span>
+
+            </div>
+
+          </div>
+
+          <!-- Purpose of Loan (Textarea) -->
+          <div>
+
+            <label for="purpose" class="block text-sm font-medium text-gray-700 mb-1">Purpose of Loan</label>
+
+            <textarea id="purpose" name="purpose" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-ssu-secondary focus:border-ssu-secondary resize-none transition duration-150"></textarea>
+
+          </div>
+
+          <!-- Submission Message Container -->
+          <div id="submission-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative text-center font-semibold" role="alert">
+
+            <!-- Message will be inserted here by JS -->
+          </div>
+
+          <!-- Submit Button --><button type="submit" id="submit-button" class="w-full px-6 py-3 text-lg font-bold text-ssu-primary bg-ssu-secondary rounded-full shadow-md hover:bg-yellow-600 transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-ssu-secondary/50">
+
+            Submit Application
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+    <!-- FAQ and Contact Section -->
+    <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:col-span-3 gap-12">
+
+        <!-- FAQ Accordion -->
+        <div class="lg:col-span-2">
+
+          <h2 class="text-3xl font-bold mb-8 text-ssu-primary">Frequently Asked Questions</h2>
+
+          <div class="space-y-4">
+
+            <!-- FAQ 1: Status Check (CLARIFIED) -->
+
+            <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+
+              <button class="faq-toggle w-full text-left font-semibold text-lg flex justify-between items-center text-ssu-primary">
+
+                How do I check my application status?
+
+                <svg class="w-5 h-5 transition-transform duration-300" data-icon="down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+
+              </button>
+
+              <div class="faq-content mt-2 text-gray-600 hidden">
+
+                You can check your status by calling the **AAL** or emailing us with your Student ID number. Updates typically take **1-2 business days** after submission.
+
+              </div>
+
+            </div>
+
+            <!-- FAQ 2: Repayment Plan (CLARIFIED) -->
+
+            <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+
+              <button class="faq-toggle w-full text-left font-semibold text-lg flex justify-between items-center text-ssu-primary">
+
+                What is the repayment plan?
+
+                <svg class="w-5 h-5 transition-transform duration-300" data-icon="down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+
+              </button>
+
+              <div class="faq-content mt-2 text-gray-600 hidden">
+
+                Repayment for most loans typically begins **weekly bases**. Interest may begin to accrue immediately upon disbursement. Specific terms will be detailed in your final loan agreement.
+
+              </div>
+
+            </div>
+
+            <!-- FAQ 3: Eligibility (NEW) -->
+
+            <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+
+              <button class="faq-toggle w-full text-left font-semibold text-lg flex justify-between items-center text-ssu-primary">
+
+                Who is eligible to apply for Allowance Aid Loans?
+
+                <svg class="w-5 h-5 transition-transform duration-300" data-icon="down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+
+              </button>
+
+              <div class="faq-content mt-2 text-gray-600 hidden">
+
+                All **currently enrolled SSU students or other institution** who are in good standing (not under disciplinary probation) are eligible to apply. Priority is often given to those with demonstrated financial need.
+
+              </div>
+
+            </div>
+
+            <!-- FAQ 4: Required Documents (NEW) -->
+
+            <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+
+              <button class="faq-toggle w-full text-left font-semibold text-lg flex justify-between items-center text-ssu-primary">
+
+                What documents are required for the application?
+
+                <svg class="w-5 h-5 transition-transform duration-300" data-icon="down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+
+              </button>
+
+              <div class="faq-content mt-2 text-gray-600 hidden">
+
+                For the preliminary application on this page, you only need your **Student ID**. If your application is approved, you may be asked to provide an official proof of enrollment, a valid school ID, and a co-maker's signature (for loans over ₱1,000).
+
+              </div>
+
+            </div>
+
+            <!-- FAQ 5: Multiple Applications (Existing, renumbered) -->
+
+            <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+
+              <button class="faq-toggle w-full text-left font-semibold text-lg flex justify-between items-center text-ssu-primary">
+
+                Can I apply for multiple programs?
+
+                <svg class="w-5 h-5 transition-transform duration-300" data-icon="down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+
+              </button>
+
+              <div class="faq-content mt-2 text-gray-600 hidden">
+
+                Yes, you may apply for any program you qualify for, but only one loan may be approved per academic year.
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Contact Information -->
+        <div id="contact" class="bg-ssu-primary p-6 rounded-xl shadow-2xl text-white h-fit">
+
+          <h3 class="text-2xl font-bold mb-4 border-b border-ssu-secondary pb-2">Get in Touch</h3>
+
+          <p class="mb-4">Our office is ready to assist you with any questions regarding financial aid.</p>
+
+          <div class="space-y-3">
+
+            <p class="flex items-center">
+
+              <svg class="w-6 h-6 mr-3 text-ssu-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+
+              <a href="mailto:loans@ssu.edu.ph" class="hover:underline">AALS@gmail.com</a>
+
+            </p>
+
+            <p class="flex items-center">
+
+              <svg class="w-6 h-6 mr-3 text-ssu-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+
+              <span class="font-mono">(63)995 867 7160</span>
+
+            </p>
+
+            <p class="text-sm pt-2 opacity-80">
+
+              Student Services Office, SSU Main Campus
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Terms and Policies Modal (Hidden by default) -->
+  <div id="terms-modal" class="fixed inset-0 z-[100] hidden bg-gray-900 bg-opacity-95 overflow-y-auto">
+
+    <div class="max-w-4xl mx-auto my-8 p-8 bg-white rounded-xl shadow-2xl relative">
+
+      <button id="close-terms-modal" class="absolute top-4 right-4 text-gray-700 hover:text-red-600 transition">
+
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+
+      </button>
+
+      <h1 class="text-4xl font-bold text-ssu-primary mb-6 border-b pb-3">Terms and Policies</h1>
+
+     <referrerpolicy=""-- Terms and Conditions -->
+
+      <div class="mb-8">
+
+        <h2 class="text-2xl font-bold text-ssu-primary mb-3">1. Terms and Conditions of Use</h2>
+
+        <ol class="list-decimal list-outside space-y-4 text-gray-700 pl-5">
+
+          <li>
+
+            <p>1.1 By accessing this, you are agreeing to be bound by these web site **Terms and Conditions of Us
+<div>
+  <href="Terms
+
+1.1 By accessing this, you are agreeing to be bound by these services Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this service. The materials contained in this text stated that are protected by applicable copyright and trade mark law. 
+
+1.2 We reserve the right to revise these Terms of Use from time to time with or without notice. If any such revision is unacceptable to you, your only recourse is to cease from accessing the service and to cancel your account. Your continued access and use of the service following such revision in Terms and Conditions shall mean acceptance of, and assent to, such change. 
+
+1.3 Without prejudice to other rights existing under the laws or these Terms and Conditions, this service reserves the right to change, suspend, restrict or cancel accounts or suspend or terminate access to this service at any time, with or without notice, and based solely in its discretion. This service or its administrators shall determine any breach or violation of these Terms and Conditions, based solely in its judgement and discretion. This service or its administrators shall not be liable to any user or third party for any modification, change or restriction pertaining to a user's access to, or services provided by the Site.
+
+1.4 You acknowledge and agree that activation of the feature on the Partner Platform and the reflection of an Available Credit Limit does not automatically grant you a Loan Facility and such activation and limit only reflect that you can apply for a Loan Facility to a certain amount and that we will process such application. For the avoidance of doubt, your application for a Loan Facility shall stil be subject to the Lender's approval and grant.
+
+ 1.5 In using the Services, you acknowledge and agree that you are bound by the additional terms and conditions as provided under the relevant Loan Facility Agreement, which will be deemed incorporated herein by reference and made available to you by the relevant Lender prior to, or at the time of, their provision of the relevant Loan Facility to you. In the event of any conflict or inconsistency between the provisions of these Terms and Conditions and the provisions of the Loan Facility Agreement, the provisions of the latter will prevail. 
+
+1.6 You acknowledge and agree that we may allocate your Loan Facility to any Lender at our sole and absolute discretion.
+
+1.7 You acknowledge and agree that, where we are not the Lender under a Facility Agreement, we act only as a Facility Manager, such as processing this feature for you and the Services and being an intermediary to bring together the Lender and the Borrower for the provision of the Loan Facility in the provision of the Services. By using the Services, you agree to the following:
+
+(a) you irrevocably appoint us as Facility Manager with the functions, rights and authorities under these Terms and Conditions, the Loan Facility Agreement and any other applicable terms and conditions (collectively, "Applicable T&Cs") for the duration of such Applicable T&Cs; and
+
+(b) you may be charged by us with fees for our Facility Manager services, including, but not limited to, the fees provided in the Applicable T&Cs.
+
+Study the Disclosure Statement 
+
+We will provide you with a Disclosure Statement or Loan Application Form before taking a loan from us. Please study the terms and conditions in this Disclosure Statement carefully before proceeding with your loan transaction.
+
+Disclaimer
+
+The materials on AA lending services are provided as is. AA lending services make no warranties, expressed or inmplied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further,  AA lending services does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet website or otherwise relating to such materials or on any sites linked to this service.
+
+Limitations 
+
+In no event shall AA lending  services or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on AA lending  services Internet site, even if AA lending services or an AA lending  services authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+
+"
